@@ -1,16 +1,14 @@
+[TOC]
+
 # Awesome Computer Vision Models Attribution
 
 ***Continuously Update ...***
-
-
 
 ## What is Data Attribution?
 
 Consider a model prediction problem. We have a dataset $D=\{z_1, ..., z_n \}$ of $n$ training examples, each of which is an input-label pair $z_i = (x_i, y_i) \in Z $, where $x_i \in \mathcal{X}^{n\times k}$ is the input and $y_i \in \mathcal{Y}$ is the output. Let $\mathcal{L}(z,\theta)$ be the loss function, and assume that model parameters are trained by minimizing the empirical risk  $\hat{\theta}=\arg\min_{\theta\in\Theta}\frac{1}{n}\sum_{i=1}^{n}\mathcal{L}(z_{i},\theta) =\arg\min_{\theta\in\Theta} \mathcal{R}(\theta) $, where $\mathcal{R}(\theta) = \frac{1}{n} \sum_{i=1}^{n} \mathcal{L}(z_i, \theta)$.
 
 Now we define a model output function $f(z,\theta)$, which maps an interest point $z$ and model parameters $\theta\in\Theta$ to output predictions. A data attribution method $\tau(z,D)$ assigns a score to each point $z$ based on the training dataset $D$, measuring how much the training dataset $D$ influences the prediction of the model output function $f(z,\hat{\theta})$. Normally, the higher the attribution score is, the more contribution it has done to the interest point.
-
-
 
 ## Preliminaries
 
